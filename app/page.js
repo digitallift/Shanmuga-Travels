@@ -1,65 +1,50 @@
 import Image from "next/image";
+import { LuPlane } from "react-icons/lu";
+import { FaCar } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+     <div className="flex flex-col md:flex-row items-start justify-center gap-6 ">
+      <div>
+      <FaCar size={100}/>
+      </div>
+      <div className="flex  flex-col">
+        <div className="text-5xl  m-6 ">
+          <p>Book a Cab Anytime, </p>
+          <p>Anywhere.</p>
+        </div>
+        <div className="text-lg m-6  max-w-200 tracking-wide">
+          <p>
+            Experience reliable rides right at your fingertips, anytime you
+            need.
+          </p>
+          <p>
+            Enjoy seamless booking with lightning-fast pickup times wherever you
+            are.
+          </p>
+          <p>
+            Ride comfortably with affordable prices designed for every journey.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hidden sm:hidden md:hidden lg:absolute lg:top-100 lg:left-130 lg:grid lg:grid-cols-3 mt-6 gap-6 lg:gap-10">
+          <div className="flex justify-center items-center  bg-[#F5DCDC] px-2 py-4 gap-4 rounded-xl shadow-sm">
+            <FaCar size={30}/>
+            <span className="text-xl font-medium w-1/2 ">Address Pickup</span>
+          </div>
+          <div className="flex items-center justify-center  bg-[#F5DCDC] px-6 py-4 gap-4 rounded-xl shadow-sm">
+            <LuPlane size={30}/>
+            <span className="text-xl font-medium w-1/2">Airport Transfer</span>
+          </div>
+          <div className="flex items-center justify-center bg-[#F5DCDC] px-6 py-4 space-x-10 rounded-xl shadow-lg">
+            <LuPlane size={30}/>
+            <span className="text-xl font-medium w-1/2">Long Distance</span>
+          </div>
+          <div className="flex items-center  justify-center bg-[#F5DCDC] px-6 py-4 gap-4 rounded-xl shadow-sm">
+            <LuPlane size={30}/>
+            <span className="text-xl font-medium w-1/2">Taxi Tours </span>
+          </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
