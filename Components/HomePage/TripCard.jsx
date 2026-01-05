@@ -54,11 +54,11 @@ const TripCard = () => {
         Popular Trips from Chennai
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-8">
         {trips.map((trip, index) => (
           <div
             key={index}
-            className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            className="max-w-sm bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-102 transition-all duration-300"
           >
             {/* IMAGE */}
             <div className="relative w-full h-48">
@@ -76,7 +76,7 @@ const TripCard = () => {
               <p className="text-gray-600 text-sm line-clamp-2">{trip.description}</p>
 
               <div className="mt-4 flex items-center gap-2 text-yellow-500">
-                <FaMapMarkerAlt />
+                 <FaMapMarkerAlt />
                 <span className="text-gray-700 text-sm">{trip.location}</span>
               </div>
             </div>

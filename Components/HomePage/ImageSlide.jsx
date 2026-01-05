@@ -1,6 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
 
 const images = [
   "/images/fplace.jpg",
@@ -8,27 +9,30 @@ const images = [
   "/images/tplace.jpg",
 ];
 
-const ImageSlide = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === images.length - 1 ? 0 : prev + 1
-      );
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+const ImageSlide = () => {
+
+  const [currentindex,SetIndex] = useState(0);
+
+  useEffect(()=>{
+     const intervel = setInterval(() => {
+        SetIndex((prev)=>
+        prev === images.length -1 ? 0 : prev+1 );
+     }, 3000);
+     
+     return () => clearInterval(intervel);
+
+  },[]);
 
   return (
-    <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden rounded-2xl">
-
-      {/* IMAGES */}
+        <section className="h-dvh w-full">
+         
+             {/* IMAGES */}
       {images.map((src, index) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out 
-          ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+          ${index === currentindex ? "opacity-100" : "opacity-0"}`}
         >
           <Image
             src={src}
@@ -40,18 +44,21 @@ const ImageSlide = () => {
         </div>
       ))}
 
-      {/* DOTS */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+       {/* DOTS */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, i) => (
           <div
             key={i}
-            className={`w-3 h-3 rounded-full transition-all
-              ${currentIndex === i ? "bg-white" : "bg-white/40"}`}
+            className={`w-5 h-0.5  transition-all
+              ${currentindex === i ? "bg-white" : "bg-white/40"}`}
           />
         ))}
       </div>
-    </section>
-  );
-};
 
-export default ImageSlide;
+
+         
+        </section>
+  )
+}
+
+export default ImageSlide

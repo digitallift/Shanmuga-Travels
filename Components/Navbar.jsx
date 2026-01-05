@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8">
 
         {/* TOP BAR */}
         <div className="flex justify-between items-center h-16">
@@ -30,10 +30,8 @@ const Navbar = () => {
           </Link>
 
           {/* HAMBURGER BUTTON */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden text-2xl text-black"
-          >
+          <button onClick={() => setOpen(!open)}
+            className="lg:hidden text-2xl text-black">
             {open ? <FaTimes /> : <FaBars />}
           </button>
 
