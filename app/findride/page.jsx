@@ -1,10 +1,11 @@
+import VehicleCard from '@/Components/HomePage/VehicleCard'
 import React from 'react'
 
 const page = () => {
   return (
-    <div className="mx-auto text-center mt-30 text-3xl  font-semibold text-black " >
-        Find Ride  
-    </div>
+    <section className="" >
+       <VehicleCard/>
+    </section>
   )
 }
 

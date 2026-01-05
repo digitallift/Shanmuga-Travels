@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
+import Link from "next/link";
 
  const trips = [
     {
@@ -71,7 +73,7 @@ const TripCard = () => {
             </div>
 
             {/* CONTENT */}
-            <div className="p-4">
+            <div className="px-4 py-5">
               <h3 className="text-xl font-semibold text-black mb-2">{trip.title}</h3>
               <p className="text-gray-600 text-sm line-clamp-2">{trip.description}</p>
 
@@ -79,7 +81,17 @@ const TripCard = () => {
                  <FaMapMarkerAlt />
                 <span className="text-gray-700 text-sm">{trip.location}</span>
               </div>
+             <Link href="/tourpackage"
+               className="inline-flex mx-auto md:mx-0 mt-7 md:mt-4 rounded-full px-4 py-2 bg-blue-900 hover:bg-red-900 transition duration-500">
+                <span className="flex gap-2 text-xs md:text-sm  text-white font-semibold items-center">
+                 Book Now
+                <span className="bg-white text-black px-0.5 py-0.5 rounded-full">
+                 <GoArrowRight className="h-5 w-5 md:h-6 md:w-6" />
+               </span>
+               </span>
+              </Link>
             </div>
+          
           </div>
         ))}
       </div>
