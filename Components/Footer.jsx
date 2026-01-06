@@ -52,13 +52,17 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
           <ul className="space-y-3 text-gray-700">
-            <li className="flex items-center gap-3">
+            <li >
+              <a className="flex items-center gap-3" href="tel:+919500952130">
               <FaPhoneAlt size={16} className="text-primary" />
-              +91 98765 43210
+              +91 95009 52130
+              </a>
             </li>
-            <li className="flex items-center gap-3">
+            <li>
+              <a className="flex items-center gap-3" href="mailto:shanmugatravels@gmail.com">
               <FaEnvelope size={16} className="text-primary" />
-              support@shanmugatravels.com
+              shanmugatravels@gmail.com
+              </a>
             </li>
           </ul>
 

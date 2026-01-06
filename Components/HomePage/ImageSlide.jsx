@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 
 
 const images = [
-  "/images/locations/rameswaram.jpg",
-  "/images/locations/Vivekananda.jpg",
-  "/images/locations/pambanbridge.jpg"
+  "/images/locations/tem3.jpg",
+  "/images/locations/tem1.jpg",
+  "/images/locations/pambanbridge.jpg",
+  "/images/locations/tem2.jpg"
   
 ];
 
@@ -39,7 +40,7 @@ const ImageSlide = () => {
             src={src}
             alt={`Slide ${index + 1}`}
             fill
-            className="object-cover"
+            className="object-bottom-right"
             priority={index === 0}
           />
         </div>

@@ -13,8 +13,8 @@ const SSlide = () => {
 
   const openWhatsApp = (message) => {
   const text = encodeURIComponent(message);
-  window.open(`https://wa.me/919566762130?text=${text}`, "_blank");
-};
+  window.open(`https://wa.me/919500952130?text=${text}`, "_blank");
+  };
 
   return (
        <section className="w-full h-dvh">

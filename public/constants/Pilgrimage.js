@@ -37,7 +37,7 @@ const PilgrimageList = [
   },
   {
     id: 5,
-    img: "/images/locations/thiruvalluvarstatue.jpg",
+    img: "/images/locations/Sankarankovil.webp",
     title: "Sankarankovil Temple",
     description:
       "Sankarankovil Temple is unique as it worships Lord Shiva and Lord Vishnu together in the form of Sankaranarayanar. This temple symbolizes unity between Shaivism and Vaishnavism and attracts thousands of devotees, especially during festivals like Adi Thabasu.",
