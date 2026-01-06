@@ -26,7 +26,7 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link href="/" className="flex items-center text-black font-extrabold text-2xl">
-           <Image src={"/images/cab.png"} alt="" width={80} height={28} />
+           <Image src={"/images/locations/Logo.png"} alt="" width={110} height={50} />
           </Link>
 
           {/* HAMBURGER BUTTON */}
@@ -43,21 +43,21 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-1 rounded-lg font-medium transition 
-                    ${isActive ? "bg-black text-white" : "text-black hover:bg-gray-100"}
+                  className={`px-3 py-1 rounded-lg  font-semibold transition 
+                    ${isActive ? "bg-gradient-to-r from-primary via-teal to-gold text-white" : "text-black hover:text-teal hover:bg-gray-100"}
                   `}
                 >
                   {link.name}
                 </Link>
               );
             })}
-
+{/* 
             <Link
               href="/book"
-              className="px-3 py-1 bg-black text-white rounded-xl font-semibold hover:bg-gray-900 transition"
+              className="px-3 py-1 bg-navy text-white rounded-lg font-semibold hover:bg-primary transition"
             >
               Book Now
-            </Link>
+            </Link> */}
           </div>
         </div>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={`block px-4 py-1 rounded-lg text-base font-medium transition
-                    ${isActive ? "bg-black text-white" : "text-black hover:bg-gray-200"}
+                    ${isActive ? "bg-gradient-to-r from-primary via-teal to-gold text-white" : "text-black hover:text-teal hover:bg-gray-200"}
                   `}
                 >
                   {link.name}
@@ -81,13 +81,13 @@ const Navbar = () => {
               );
             })}
 
-            <Link
+            {/* <Link
               href="/book"
               onClick={() => setOpen(false)}
               className="block mt-2 mx-4 px-5 py-3 bg-black text-white rounded-xl text-center font-semibold hover:bg-gray-900 transition"
             >
               Book Now
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>

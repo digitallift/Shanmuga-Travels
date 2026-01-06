@@ -99,7 +99,7 @@ const VehicleCard = () => {
 
               <Link
                 href="/aboutus"
-                className="inline-flex items-center gap-2 mt-4 bg-blue-900 hover:bg-red-900 text-white px-5 py-2 rounded-full transition duration-500"
+                className="inline-flex font-semibold items-center gap-2 mt-4 bg-gradient-to-r from-primary via-teal to-gold hover:from-gold hover:via-teal hover:to-primary text-white px-5 py-2 rounded-full transition duration-500"
               >
                 View More
                 <span className="bg-white text-black p-1 rounded-full">

@@ -1,6 +1,13 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaTwitter, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -10,70 +17,70 @@ export default function Footer() {
         {/* LOGO + DESCRIPTION */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <Image src="/images/cab.png" alt="logo" width={70} height={30} />
-            <h2 className="text-2xl font-extrabold text-black">CabGo</h2>
+            <Image src="/images/locations/Logo.png" alt="logo" width={120} height={50} />
+           
           </div>
-
           <p className="text-gray-600 text-sm leading-relaxed">
-            Your trusted partner for safe, fast and affordable rides.  
-            Book anywhere, anytime with ease.
+            Your trusted partner for safe, fast, and comfortable rides.  
+            Travel anywhere, anytime with ease.
           </p>
         </div>
 
         {/* QUICK LINKS */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-black">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-4 text-gray-900">Quick Links</h3>
           <ul className="space-y-2 text-gray-700">
-            <li><Link href="/findride" className="hover:text-black">Find Ride</Link></li>
-            <li><Link href="/tourpackage" className="hover:text-black">Tour Package</Link></li>
-            <li><Link href="/aboutus" className="hover:text-black">About Us</Link></li>
-            <li><Link href="/contactus" className="hover:text-black">Contact Us</Link></li>
+            <li><Link href="/findride" className="hover:text-primary transition">Find Ride</Link></li>
+            <li><Link href="/tourpackage" className="hover:text-primary transition">Tour Package</Link></li>
+            <li><Link href="/aboutus" className="hover:text-primary transition">About Us</Link></li>
+            <li><Link href="/contactus" className="hover:text-primary transition">Contact Us</Link></li>
           </ul>
         </div>
 
         {/* SUPPORT */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-black">Support</h3>
+          <h3 className="text-lg font-semibold mb-4 text-gray-900">Support</h3>
           <ul className="space-y-2 text-gray-700">
-            <li> <a href="#" className="hover:text-black">Terms & Conditions</a> </li>
-            <li> <a href="#" className="hover:text-black">Privacy Policy</a> </li>
-            <li> <a href="#" className="hover:text-black">Refund Policy</a> </li>
-            <li> <a href="#" className="hover:text-black">Help Center</a> </li>
+            <li><a href="#" className="hover:text-primary transition">Terms & Conditions</a></li>
+            <li><a href="#" className="hover:text-primary transition">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-primary transition">Refund Policy</a></li>
+            <li><a href="#" className="hover:text-primary transition">Help Center</a></li>
           </ul>
         </div>
 
         {/* CONTACT */}
         <div>
-          <h3 className="text-lg font-semibold mb-4 text-black">Contact</h3>
+          <h3 className="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-center gap-3">
-              <FaPhoneAlt size={16} className="text-black" />
+              <FaPhoneAlt size={16} className="text-primary" />
               +91 98765 43210
             </li>
             <li className="flex items-center gap-3">
-              <FaEnvelope size={16} className="text-black" />
-              support@cabgo.com
+              <FaEnvelope size={16} className="text-primary" />
+              support@shanmugatravels.com
             </li>
           </ul>
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-4 mt-6">
-            <a className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
+            <a className="p-2 bg-gradient-to-r from-primary via-teal to-gold text-white rounded-full hover:opacity-90 transition">
               <FaFacebookF size={16} />
             </a>
-            <a className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
+            <a className="p-2 bg-gradient-to-r from-primary via-teal to-gold text-white rounded-full hover:opacity-90 transition">
               <FaInstagram size={16} />
             </a>
-            <a className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
+            <a className="p-2 bg-gradient-to-r from-primary via-teal to-gold text-white rounded-full hover:opacity-90 transition">
               <FaTwitter size={16} />
             </a>
           </div>
         </div>
+
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t py-4 text-center text-gray-600 text-sm">
-        © {new Date().getFullYear()} CabGo. All rights reserved.
+      <div className="border-t py-4 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} Shanmuga Travels. All rights reserved.
       </div>
     </footer>
   );

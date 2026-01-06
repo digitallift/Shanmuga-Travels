@@ -3,6 +3,9 @@ import SSlide from '@/Components/HomePage/SSlide';
 import ImageSlide from '@/Components/HomePage/ImageSlide';
 import TripCard from '@/Components/HomePage/TripCard';
 import VehicleCard from '@/Components/HomePage/VehicleCard';
+import TouristSlide from '@/Components/HomePage/TouristSlide';
+import WhyChooseUs from '@/Components/HomePage/WhyChooseUs';
+import TravelServices from '@/Components/HomePage/TravelServices';
 
 
 export default function Home() {
@@ -11,7 +14,9 @@ export default function Home() {
       <ImageSlide/>
       <SSlide/>
       <TripCard/>
-      <VehicleCard/>
+      {/* <VehicleCard/> */}
+      <TravelServices/>
+      <WhyChooseUs/>
     </div>
   );
 }
