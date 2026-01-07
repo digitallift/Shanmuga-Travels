@@ -12,7 +12,7 @@ import { PilgrimageList } from "@/public/constants/Pilgrimage";
 const TripCard = () => {
   return (
      <section className="max-w-7xl mx-auto px-6 py-15 md:py-5">
-      <h2 className="text-3xl md:text-4xl font-semibold bg-gradient-to-r text-transparent bg-clip-text from-primary via-teal to-gold mb-10 text-center">
+      <h2 className="text-3xl md:text-4xl p-1 font-semibold bg-gradient-to-r text-transparent bg-clip-text from-primary via-teal to-gold mb-10 text-center">
         Pilgrimage Trips – All Religions
       </h2>
 

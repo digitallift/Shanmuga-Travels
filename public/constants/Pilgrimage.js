@@ -1,7 +1,7 @@
 const PilgrimageList = [
   {
     id: 1,
-    img: "/images/locations/loc.jpg",
+    img: "/images/locations/loc1.jpg",
     title: "Tiruchendur Murugan Temple",
     description:
       "One of the six sacred abodes (Arupadai Veedu) of Lord Murugan, Tiruchendur Murugan Temple is uniquely located on the shores of the Bay of Bengal. Devotees believe this temple marks the place where Lord Murugan defeated the demon Surapadman. The temple is famous for its spiritual vibrations, sea-facing sanctum, and grand festivals like Skanda Sashti.",
@@ -19,7 +19,7 @@ const PilgrimageList = [
   },
   {
     id: 3,
-    img: "/images/locations/loc1.jpg",
+    img: "/images/locations/navathirupathi.jpg",
     title: "Navatirupathi Temples",
     description:
       "Navatirupathi refers to nine sacred temples dedicated to Lord Vishnu, located along the banks of the Tamirabarani River. These temples are associated with the Navagrahas (nine planetary deities) and are believed to remove planetary doshas. Pilgrims usually cover all nine temples in a single spiritual journey.",
@@ -63,7 +63,16 @@ const PilgrimageList = [
     category: "Christian Churches",
   },
   {
-    id: 8,
+  id: 8,
+  img: "/images/locations/loc.jpg",
+  title: "Historic Churches of Thoothukudi & Tiruchendur",
+  description:
+    "Thoothukudi and Tiruchendur are home to several historic Christian churches that reflect the region’s deep-rooted Christian heritage. These churches serve as centers for prayer, community gatherings, and major celebrations such as Christmas and Easter.",
+  location: "Thoothukudi & Tiruchendur, Tamil Nadu",
+  category: "Christian Churches",
+ },
+  {
+    id: 9,
     img: "/images/locations/palayamjuma.jpg",
     title: "Palayamkottai Jumma Masjid",
     description:
@@ -72,7 +81,7 @@ const PilgrimageList = [
     category: "Muslim Religious Places",
   },
   {
-    id: 9,
+    id: 10,
     img: "/images/locations/jumma.jpeg",
     title: "Local Mosques of Thoothukudi & Tiruchendur",
     description:
@@ -87,8 +96,7 @@ const TopSpots = [
     id: 1,
     img: "/images/locations/Kutralam.jpg",
     title: "Courtallam Waterfalls",
-    description:
-      "Known as the ‘Spa of South India’, Courtallam Waterfalls is famous for its medicinal waters flowing through herbal-rich forests of the Western Ghats. The area features multiple waterfalls such as Main Falls, Five Falls, and Old Courtallam, making it a popular destination for nature lovers and families.",
+    description:"Known as the ‘Spa of South India’, Courtallam Waterfalls is famous for its medicinal waters flowing through herbal-rich forests of the Western Ghats. The area features multiple waterfalls such as Main Falls, Five Falls, and Old Courtallam, making it a popular destination for nature lovers and families.",
     location: "Courtallam, Tenkasi District, Tamil Nadu",
   },
   {
@@ -133,5 +141,65 @@ const TopSpots = [
   },
 ];
 
+const vehicles = [
+  {
+    id: 1,
+    name: "Tempo Traveller",
+    price: "1 Day: ₹6,500",
+    desc: "Free Distance: 120 km | Extra Distance: ₹25 per km",
+    longdesc: "Spacious Tempo Traveller ideal for family trips, corporate travel, and group tours with comfortable seating.",
+    img: "/images/Tempovan.png"
+  },
+  {
+    id: 2,
+    name: "Ertiga",
+    price: "1 Day: ₹4,500",
+    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    longdesc: "Perfect family MPV offering comfort, good mileage, and ample luggage space for long journeys.",
+    img: "/images/ertiga.png"
+  },
+  {
+    id: 3,
+    name: "Innova Crysta",
+    price: "1 Day: ₹5,500",
+    desc: "Free Distance: 120 km | Extra Distance: ₹20 per km",
+    longdesc: "Premium SUV known for luxury interiors, smooth ride quality, and long-distance comfort.",
+    img: "/images/innova.png"
+  },
+  {
+    id: 4,
+    name: "Swift Dzire",
+    price: "1 Day: ₹3,000",
+    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    longdesc: "Compact sedan suitable for city travel and short trips with excellent fuel efficiency.",
+    img: "/images/dzire.png"
+  },
+  {
+    id: 5,
+    name: "Etios",
+    price: "1 Day: ₹3,500",
+    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    longdesc: "Reliable and spacious sedan ideal for both city and highway travel.",
+    img: "/images/etios.jpg"
+  },
+  
+  {
+    id: 6,
+    name: "Swift",
+    price: "1 Day: ₹4,500",
+    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    longdesc: "Hatchback best suited for city rides, solo travel, and budget-friendly trips.",
+    img: "/images/swift.png"
+  },
+  {
+    id: 7,
+    name: "Swift",
+    price: "1 Day: ₹4,500",
+    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    longdesc: "Economical and easy-to-drive hatchback with great mileage and comfort.",
+    img: "/images/swift.png"
+  }
+];
 
-export { PilgrimageList, TopSpots };
+
+export { PilgrimageList, TopSpots ,vehicles };

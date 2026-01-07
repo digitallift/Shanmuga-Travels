@@ -1,108 +1,60 @@
+"use client";
+import { vehicles } from '@/public/constants/Pilgrimage';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 import { GoArrowRight } from "react-icons/go";
-
-const vehicles = [
-  {
-    id: 1,
-    name: "Tempo Traveller",
-    price: "1 day 6500",
-    desc: "120 km free, extra 1 km ₹25",
-    longdesc: "Spacious Tempo Traveller ideal for family trips, corporate travel, and group tours with comfortable seating.",
-    img: "/images/Tempovan.png"
-  },
-  {
-    id: 2,
-    name: "Ertiga",
-    price: "1 day 4500",
-    desc: "120 km free, extra 1 km ₹18",
-    longdesc: "Perfect family MPV offering comfort, good mileage, and ample luggage space for long journeys.",
-    img: "/images/ertiga.png"
-  },
-  {
-    id: 3,
-    name: "Innova Crysta",
-    price: "1 day 5500",
-    desc: "120 km free, extra 1 km ₹20",
-    longdesc: "Premium SUV known for luxury interiors, smooth ride quality, and long-distance comfort.",
-    img: "/images/innova.png"
-  },
-  {
-    id: 4,
-    name: "Swift Dzire",
-    price: "1 day 3000",
-    desc: "120 km free, extra 1 km ₹18",
-    longdesc: "Compact sedan suitable for city travel and short trips with excellent fuel efficiency.",
-    img: "/images/dzire.png"
-  },
-  {
-    id: 5,
-    name: "Etios",
-    price: "1 day 3500",
-    desc: "120 km free, extra 1 km ₹18",
-    longdesc: "Reliable and spacious sedan ideal for both city and highway travel.",
-    img: "/images/etios.jpg"
-  },
-  
-  {
-    id: 6,
-    name: "Swift",
-    price: "1 day 2800",
-    desc: "120 km free, extra 1 km ₹16",
-    longdesc: "Hatchback best suited for city rides, solo travel, and budget-friendly trips.",
-    img: "/images/swift.png"
-  },
-  {
-    id: 7,
-    name: "Swift",
-    price: "1 day 2800",
-    desc: "120 km free, extra 1 km ₹16",
-    longdesc: "Economical and easy-to-drive hatchback with great mileage and comfort.",
-    img: "/images/swift.png"
-  }
-];
-
-
 
 const VehicleCard = () => {
   return (
- <div className="py-10 px-2 max-w-6xl mx-auto">
-      <h1 className="text-4xl text-center mb-10 font-semibold">
-         Find Ride
+    <section className="py-14 px-4 max-w-7xl mx-auto">
+      <h1 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal to-gold md:text-4xl font-bold text-center mb-12">
+        Find Your Ride
       </h1>
 
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-6 mt-5 sm:grid-cols-2 lg:grid-cols-3">
         {vehicles.map((item) => (
           <div
             key={item.id}
-            className="border hover:scale-102 transition-all duration-500  rounded-2xl shadow-md overflow-hidden bg-white"
-          >
+            className="group rounded-3xl bg-white overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 flex flex-col">
             {/* Image */}
-            <div className="relative w-full hover:shadow-lg hover:scale-102 transition-all duration-500  h-55">
+            <div className="relative h-56 overflow-hidden">
               <Image
                 src={item.img}
                 alt={item.name}
                 fill
-                className="object-center"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+              {/* Price */}
+              <span className="absolute top-4 left-4 bg-white/90 text-blue-700 text-sm font-bold px-4 py-1 rounded-full shadow">
+                {item.price}
+              </span>
             </div>
 
             {/* Content */}
-            <div className="p-6 space-y-2">
-              <h2 className="text-2xl font-semibold">{item.name}</h2>
-              <p className="text-lg font-semibold text-blue-700">
-                {item.price}
+            <div className="p-6 flex flex-col flex-grow">
+              <h2 className="text-2xl font-semibold mb-2">
+                {item.name}
+              </h2>
+
+              <p className="text-sm font-semibold text-gray-800 mb-1">
+                {item.desc}
               </p>
-              <p className="text-sm font-medium text-gray-700">{item.desc}</p>
-              <p className="text-sm font-medium text-gray-600">{item.longdesc}</p>
+
+              <p className="text-sm text-gray-600 flex-grow">
+                {item.longdesc}
+              </p>
 
               <Link
                 href="/aboutus"
-                className="inline-flex font-semibold items-center gap-2 mt-4 bg-gradient-to-r from-primary via-teal to-gold hover:from-gold hover:via-teal hover:to-primary text-white px-5 py-2 rounded-full transition duration-500"
+                className="mt-6 inline-flex items-center justify-between gap-3 bg-gradient-to-r from-primary via-teal to-gold hover:from-gold hover:via-teal hover:to-primary text-white px-6 py-3 rounded-full font-semibold transition-all duration-500"
               >
                 View More
-                <span className="bg-white text-black p-1 rounded-full">
+                <span className="bg-white text-black p-1.5 rounded-full">
                   <GoArrowRight className="h-5 w-5" />
                 </span>
               </Link>
@@ -110,8 +62,8 @@ const VehicleCard = () => {
           </div>
         ))}
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default VehicleCard
+export default VehicleCard;

@@ -14,7 +14,7 @@ export default function Home() {
       <ImageSlide/>
       <SSlide/>
       <TripCard/>
-      {/* <VehicleCard/> */}
+      <VehicleCard/>
       <TravelServices/>
       <WhyChooseUs/>
     </div>
