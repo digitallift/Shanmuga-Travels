@@ -1,27 +1,33 @@
 import React from "react";
-import { MdOutlineFamilyRestroom } from "react-icons/md";
 
+import {
+  MdOutlineFamilyRestroom,
+  MdOutlineTravelExplore,
+  MdOutlineLocationOn,
+} from "react-icons/md";
+import { FaPrayingHands, FaUserFriends } from "react-icons/fa";
+import { RiGlobalLine } from "react-icons/ri";
 const Experience = () => {
   const experience = [
     {
       id: 1,
       title: "Families and Senior Citizens",
-      Icon: "MdOutlineFamilyRestroom ",
+      Icon: MdOutlineFamilyRestroom,
     },
     {
       id: 2,
       title: "Pilgrims of All Religions",
-      Icon: "Reliable transportation to temples, churches, and mosques.",
+      Icon: FaPrayingHands,
     },
     {
       id: 3,
       title: "NRIs Visiting Their Hometowns",
-      Icon: "Hassle-free local travel with flexible schedules.",
+      Icon: RiGlobalLine, // global / overseas
     },
     {
       id: 4,
       title: "Travellers New to the Region",
-      Icon: "Local expertise to guide you confidently through the area.",
+      Icon: MdOutlineTravelExplore,
     },
   ];
 
@@ -40,24 +46,30 @@ const Experience = () => {
 
       {/* Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {experience.map((service) => (
-          <div
-            key={service.id}
-            className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm 
-                       hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
-          >
-            {/* Icon placeholder */}
-            <div
-              className="w-14 h-14 mx-auto rounded-full flex items-center justify-center text-xl mb-5 
-                            bg-gradient-to-r from-primary via-teal to-gold text-white"
-            ></div>
+        {experience.map((service) => {
+          const IconComponent = service.Icon;
 
-            {/* Content */}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2 text-center">
-              {service.title}
-            </h3>
-          </div>
-        ))}
+          return (
+            <div
+              key={service.id}
+              className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-sm 
+                       hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+            >
+              {/* Icon placeholder */}
+              <div
+                className="w-14 h-14 mx-auto rounded-full flex items-center justify-center text-xl mb-5 
+                            bg-gradient-to-r from-primary via-teal to-gold text-white"
+              >
+                <IconComponent />
+              </div>
+
+              {/* Content */}
+              <h3 className="text-lg font-semibold text-gray-900 mb-2 text-center">
+                {service.title}
+              </h3>
+            </div>
+          );
+        })}
       </div>
 
       {/* Footer text */}
