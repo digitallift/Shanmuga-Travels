@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 
 
 const images = [
-  "/images/locations/rameswaram.jpg",
+  "/images/locations/rameswaramhd.jpg",
   "/images/locations/pambanbridge.jpg",
+  "/images/locations/tiruchenduhd.png",
   "/images/locations/Vivekananda.jpg"
   
 ];
