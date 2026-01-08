@@ -5,16 +5,25 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 import Link from "next/link";
 import { PilgrimageList } from "@/public/constants/Pilgrimage";
+import { motion, spring } from "framer-motion";
 
-
- 
 
 const TripCard = () => {
   return (
      <section className="max-w-7xl mx-auto px-6 py-15 md:py-5">
-      <h2 className="text-3xl md:text-4xl p-1 font-semibold bg-gradient-to-r text-transparent bg-clip-text from-primary via-teal to-gold mb-10 text-center">
+      <motion.h2 
+        initial={{y:40,opacity:0}}
+        whileInView={{y:0,opacity:1}}
+        transition={{
+          type:spring,
+          damping:30,
+          duration:1,
+          stiffness:100
+
+        }}
+       className="text-3xl md:text-4xl p-1 font-semibold bg-gradient-to-r text-transparent bg-clip-text from-primary via-teal to-gold mb-10 text-center">
         Pilgrimage Trips – All Religions
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-8">
         {PilgrimageList.map((trip, index) => (
