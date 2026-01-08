@@ -35,20 +35,20 @@ export default function FormSubmit() {
               </div>
               <div>
                 <p className="text-sm text-black mb-1">Phone Number</p>
-                <p className="text-gray-800 font-medium">+91 95667 62130</p>
+                <Link href="tel:919566762130" className="text-gray-800 font-medium">+91 95667 62130</Link>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-4">
+            <div  className="flex items-start  gap-4">
               <div className="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-5 bg-gradient-to-r from-primary via-teal to-gold text-white group-hover:scale-110 transition">
                 <MdEmail />
               </div>
               <div>
                 <p className="text-sm text-black mb-1">Send Email</p>
-                <p className="text-gray-800 font-medium">
+                <Link href="mailto:shanmugatravels@gmail.com" className="text-gray-800 font-medium">
                   shanmugatravels@gmail.com
-                </p>
+                </Link>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function FormSubmit() {
               hover:from-gold hover:via-teal-500 hover:to-primary
               transition duration-500"
             >
-              <span className="text-white font-semibold">View More</span>
+              <span className="text-white uppercase font-semibold">Submit</span>
               <span className="bg-white text-black p-2 rounded-full">
                 <GoArrowRight className="h-5 w-5" />
               </span>

@@ -170,7 +170,7 @@ const vehicles = [
     id: 4,
     name: "Swift Dzire",
     price: "1 Day: ₹3,000",
-    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    desc: "Free Distance: 120 km | Extra Distance: ₹14 per km",
     longdesc: "Compact sedan suitable for city travel and short trips with excellent fuel efficiency.",
     img: "/images/dzire.png"
   },
@@ -178,7 +178,7 @@ const vehicles = [
     id: 5,
     name: "Etios",
     price: "1 Day: ₹3,500",
-    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    desc: "Free Distance: 120 km | Extra Distance: ₹14 per km",
     longdesc: "Reliable and spacious sedan ideal for both city and highway travel.",
     img: "/images/etios.jpg"
   },
@@ -187,17 +187,17 @@ const vehicles = [
     id: 6,
     name: "Swift",
     price: "1 Day: ₹4,500",
-    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
+    desc: "Free Distance: 120 km | Extra Distance: ₹14 per km",
     longdesc: "Hatchback best suited for city rides, solo travel, and budget-friendly trips.",
     img: "/images/swift.png"
   },
   {
     id: 7,
-    name: "Swift",
+    name: "Tavera",
     price: "1 Day: ₹4,500",
-    desc: "Free Distance: 120 km | Extra Distance: ₹18 per km",
-    longdesc: "Economical and easy-to-drive hatchback with great mileage and comfort.",
-    img: "/images/swift.png"
+    desc: "Free Distance: 120 km | Extra Distance: ₹14 per km",
+    longdesc: "Hatchback best suited for city rides, solo travel, and budget-friendly trips.",
+    img: "/images/locations/tavera.png"
   }
 ];
 

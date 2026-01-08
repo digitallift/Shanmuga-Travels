@@ -7,6 +7,7 @@ import {
   FaUsers,
   FaRoute,
 } from "react-icons/fa";
+import { motion, spring } from "framer-motion";
 
 const services = [
   {
@@ -46,12 +47,33 @@ const TravelServices = () => {
     <section className="w-full px-6 md:px-20 py-16 bg-white">
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-14">
-        <h2 className="text-2xl md:text-4xl font-semibold tracking-tight bg-gradient-to-r from-primary via-teal to-gold text-transparent bg-clip-text">
+        <motion.h2 
+         initial={{y:40,opacity:0}}
+                                whileInView={{y:0,opacity:1}}
+                                transition={{
+                                  type:spring,
+                                  damping:30,
+                                  duration:1,
+                                  stiffness:100
+                        
+                                }}
+        className="text-2xl md:text-4xl font-semibold tracking-tight bg-gradient-to-r from-primary via-teal to-gold text-transparent bg-clip-text">
           Our Travel Services
-        </h2>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p 
+         initial={{y:40,opacity:0}}
+                                whileInView={{y:0,opacity:1}}
+                                transition={{
+                                  type:spring,
+                                  damping:30,
+                                  duration:1,
+                                  delay:0.5,
+                                  stiffness:100
+                        
+                                }}
+        className="mt-4 text-gray-600 max-w-2xl mx-auto">
           Reliable travel solutions tailored for comfort, convenience, and peace of mind.
-        </p>
+        </motion.p>
       </div>
 
       {/* Service Cards */}

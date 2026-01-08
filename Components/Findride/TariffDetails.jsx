@@ -10,6 +10,7 @@ import {
   FaMoneyBillWave,
   FaCheckCircle,
 } from "react-icons/fa";
+import { motion, spring } from "framer-motion";
 
 const TariffDetails = () => {
   return (
@@ -21,12 +22,32 @@ const TariffDetails = () => {
 
         {/* Header */}
         <div className="mb-14 text-center">
-          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900">
+          <motion.h2 
+           initial={{y:40,opacity:0}}
+                        whileInView={{y:0,opacity:1}}
+                        transition={{
+                          type:spring,
+                          damping:30,
+                          duration:1,
+                          stiffness:100
+                
+                        }}className="text-3xl  md:text-4xl font-bold text-gray-900">
             Tariff Details & Booking Terms
-          </h2>
-          <p className="text-gray-600 mt-2">
+          </motion.h2>
+          <motion.p 
+           initial={{y:40,opacity:0}}
+                        whileInView={{y:0,opacity:1}}
+                        transition={{
+                          type:spring,
+                          damping:30,
+                          delay:0.3,
+                          duration:1,
+                          stiffness:100
+                
+                        }}
+          className="text-gray-600 mt-2">
             Transparent pricing with clear travel policies
-          </p>
+          </motion.p>
 
           {/* Highlights */}
           <div className="flex flex-wrap justify-center gap-4 mt-6">
@@ -35,13 +56,23 @@ const TariffDetails = () => {
               "Verified Drivers",
               "Transparent Billing",
             ].map((text, i) => (
-              <span
+              <motion.span
+              initial={{y:40,opacity:0}}
+               whileInView={{y:0,opacity:1}}
+                transition={{
+                          type:spring,
+                          damping:30,
+                          delay:0.8 + i * 0.5,
+                          duration:1,
+                          stiffness:100
+                
+                        }}
                 key={i}
-                className="flex items-center gap-2 bg-gradient-to-r from-primary via-teal to-gold text-white px-4 py-2 text-sm font-medium"
+                className="flex items-center rounded-xl gap-2 bg-gradient-to-r from-primary via-teal to-gold text-white px-4 py-2 text-sm font-medium"
               >
                 <FaCheckCircle />
                 {text}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>
@@ -112,8 +143,7 @@ const TariffDetails = () => {
           ].map((card, i) => (
             <div
               key={i}
-              className={`relative bg-white p-6 border-l-4 border-${card.color}-600 
-              hover:-translate-y-1 hover:shadow-xl transition duration-300`}
+              className={`relative bg-white p-6 border-l-4 border-${card.color}-600 hover:-translate-y-1 hover:shadow-xl transition duration-300`}
             >
               {/* Accent Top */}
               <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-primary via-teal to-gold" />
@@ -148,10 +178,7 @@ const TariffDetails = () => {
         <div className="mt-16 text-center">
           <a
             href="tel:+919566762130"
-            className="inline-flex items-center gap-4 
-            bg-gradient-to-r from-primary via-teal to-gold 
-            text-white px-12 py-4 text-lg font-semibold 
-            hover:scale-105 transition shadow-lg"
+            className="inline-flex items-center gap-4 bg-gradient-to-r from-primary via-teal to-gold  text-white px-12 py-4 text-lg font-semibold  rounded-2xl hover:scale-105 transition shadow-lg"
           >
             <FaPhoneAlt />
             Get Exact Pricing – +91 95667 62130
