@@ -18,8 +18,8 @@ const SSlide = () => {
   };
 
   return (
-       <section className="w-full h-dvh">
-         <div className="relative flex flex-col md:px-0 px-5 md:flex-row justify-center items-center md:items-start">
+       <section className="w-full h-full">
+         <div className="relative  flex flex-col md:px-0 px-5 md:flex-row justify-center items-center md:items-start">
           <motion.div initial={{x:-50,opacity:0}}
              whileInView={{x:0,opacity:1}}
              
@@ -30,7 +30,7 @@ const SSlide = () => {
               stiffness:100
              }}
           className="md:w-1/2 flex justify-center  ">
-            <Image className="md:h-125 object-center h-80 rounded-2xl md:w-100" src="/images/locations/manwtcab.jpg" alt="img1" width={150} height={100} />
+          <Image className="md:h-125 object-center h-80 w-65 rounded-2xl md:w-100" src="/images/locations/manwtcab.jpg" alt="img1" width={150} height={100} />
           </motion.div>
           <div className="md:w-1/2 flex flex-col mt-5  md:mt-5  justify-start items-start">
             <div className="max-w-xl w-full ">
@@ -74,7 +74,7 @@ const SSlide = () => {
               
             </div>
                           {/* FEATURE GRID */}
-              <div className=" mt-7 hidden md:-ml-60 z-30 md:grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className=" md:mt-7 hidden md:-ml-60 md:z-30 md:grid sm:grid-cols-2 md:grid-cols-3 md:gap-4">
                 {[
                   { icon: <FaCar size={26} />, label: "Address Pickup" },
                   { icon: <LuPlane size={26} />, label: "Airport Transfer" },
@@ -115,8 +115,8 @@ const SSlide = () => {
               onClick={() => openWhatsApp("Hello, I need more details")}
                className="inline-flex items-center gap-3 text-white bg-green-900 px-3.5 py-2.5 rounded-full font-semibold ">
                <FaWhatsapp className="h-6 w-6 transition-transform duration-300  group-hover:rotate-6" />
-               WhatsApp
-              </motion.button>
+                 WhatsApp
+               </motion.button>
 
               <Link  href="/aboutus"className="rounded-r-full rounded-l-full px-4 py-2 bg-gradient-to-r from-primary via-teal to-gold hover:from-gold hover:via-teal hover:to-primary duration-500 transition" >
                 <p className="flex gap-2 text-sm md:text-base text-white font-semibold items-center">View More<span className="bg-white text-black px-1 py-1 rounded-full"><GoArrowRight className="h-5 w-5 md:h-6 md:w-6"/></span></p>

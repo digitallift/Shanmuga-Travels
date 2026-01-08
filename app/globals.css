@@ -8,6 +8,10 @@
   --color-lightGold: #DBC785;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

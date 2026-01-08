@@ -10,7 +10,7 @@ import { motion, spring } from "framer-motion";
 
 const TripCard = () => {
   return (
-     <section className="max-w-7xl mx-auto px-6 py-15 md:py-5">
+     <section className="max-w-7xl mx-auto px-6 py-15 md:py-15">
       <motion.h2 
         initial={{y:40,opacity:0}}
         whileInView={{y:0,opacity:1}}
