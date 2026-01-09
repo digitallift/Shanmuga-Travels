@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 
+import { motion, spring } from "framer-motion";
 const items = [
   { url: "/images/AAirport.jpg", label: "Airport pickup & drop" },
   {
@@ -38,13 +40,23 @@ const Overlay = ({ label }) => (
 const WhatWeDo = () => {
   return (
     <div className="w-full py-12 px-4 md:px-12">
-      <h2 className="text-center text-3xl md:text-4xl font-semibold bg-gradient-to-r from-primary via-teal to-gold text-transparent bg-clip-text mb-10">
+      <motion.h2
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          type: spring,
+          damping: 30,
+          duration: 1,
+          stiffness: 100,
+        }}
+        className="text-center text-3xl md:text-4xl font-semibold bg-gradient-to-r from-primary via-teal to-gold text-transparent bg-clip-text mb-10"
+      >
         What We Do?
-      </h2>
+      </motion.h2>
 
       <div
         className="max-w-7xl mx-auto  flex flex-col gap-6 
-                      md:grid md:grid-cols-3 md:grid-rows-5"
+                      md:grid md:grid-cols-3 md:grid-rows-4"
       >
         {/* Image 1 – Large */}
         <div className="relative col-span-2 row-span-2 rounded-xl overflow-hidden group">

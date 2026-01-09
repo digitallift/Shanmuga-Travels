@@ -1,23 +1,35 @@
+"use client";
 import React from "react";
-
-import { LuPlane } from "react-icons/lu";
-import { FaCar } from "react-icons/fa";
-import { GiPathDistance } from "react-icons/gi";
-import { MdHotelClass } from "react-icons/md";
-import { GoArrowRight } from "react-icons/go";
-import { FaWhatsapp } from "react-icons/fa";
-import { MdOutlineFamilyRestroom } from "react-icons/md";
+import { motion, spring } from "framer-motion";
 const HerSection = () => {
   return (
     <div className="flex-col px-2 sm:px-40 justify-center items-center ">
       {" "}
-      <h2 className="flex  justify-center items-center text-3xl md:text-4xl font-semibold bg-gradient-to-r text-transparent bg-clip-text from-primary via-teal to-gold  text-start">
+      <motion.h2
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          type: spring,
+          damping: 30,
+          duration: 1,
+          stiffness: 100,
+        }}
+        className="text-2xl md:text-4xl font-semibold tracking-tight bg-gradient-to-r from-primary via-teal to-gold text-transparent bg-clip-text"
+      >
         About Us
-      </h2>
+      </motion.h2>
       {/* column */}
       <div className="flex  px-0 sm:px-40 py-10  gap-9  justify-center items-center ">
         {/* colum2 */}
-        <div
+        <motion.h2
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            type: spring,
+            damping: 30,
+            duration: 1,
+            stiffness: 100,
+          }}
           className="flex  text-gray-600 max-w-4xl hover:max-w-xl mx-auto justify-center px-8 py-0 bg-white  rounded-2xl  
                        hover:-translate-y-2  transition-all duration-300 text-justify text-xl md:text-lg font-semibold   "
         >
@@ -29,7 +41,7 @@ const HerSection = () => {
           family trips, or daily travel needs. We understand local routes,
           temple timings, tourist places, and customer expectations, which helps
           us deliver smooth and stress-free journeys every time.
-        </div>
+        </motion.h2>
       </div>
     </div>
   );

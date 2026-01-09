@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-
+import { motion, spring } from "framer-motion";
 import {
   MdOutlineFamilyRestroom,
   MdOutlineTravelExplore,
@@ -34,9 +35,19 @@ const Experience = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 py-12">
       {/* Heading */}
-      <h2 className="text-center text-3xl md:text-4xl font-semibold bg-gradient-to-r from-primary via-teal to-gold text-transparent bg-clip-text mb-4">
+      <motion.h2
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{
+          type: spring,
+          damping: 30,
+          duration: 1,
+          stiffness: 100,
+        }}
+        className="text-center text-3xl md:text-4xl font-semibold bg-gradient-to-r from-primary via-teal to-gold text-transparent bg-clip-text mb-4"
+      >
         Our Experience & Local Expertise
-      </h2>
+      </motion.h2>
 
       {/* Subtitle */}
       <p className="text-center text-gray-600 max-w-5xl mx-auto text-base md:text-lg mb-10">

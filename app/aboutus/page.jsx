@@ -2,6 +2,7 @@ import Experience from "@/Components/About/experience";
 import HerSection from "@/Components/About/heroSection";
 import WhatWeDo from "@/Components/About/WhatWeDo";
 import WhyUs from "@/Components/About/whyUs";
+import WhyChooseUs from "@/Components/HomePage/WhyChooseUs";
 import React from "react";
 
 const page = () => {
@@ -10,7 +11,7 @@ const page = () => {
       <HerSection />
       <WhatWeDo />
       <Experience />
-      <WhyUs />
+      <WhyChooseUs />
     </div>
   );
 };
